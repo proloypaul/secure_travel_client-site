@@ -32,7 +32,7 @@ const Footer = () => {
                         </ul>
                     </Grid>
                     <Grid item xs={12} md={3} className="social"><i className="fab fa-facebook-square"></i><i className="fab fa-twitter-square"></i><i className="fab fa-instagram-square"></i>
-                        <p>Travel_exp &copy; 2022</p>
+                        <p>Travelers &copy; 2022</p>
                     </Grid>
                 </Grid>
             </Container>
