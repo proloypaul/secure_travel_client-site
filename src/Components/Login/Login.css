@@ -1,0 +1,34 @@
+.login-container{
+    background: #301934;
+    color: white;
+    padding: 80px 0px;
+    text-align: center;
+}
+.signInBtn{
+    width: 60%;
+    padding: 10px 0px;
+    background: #000000;
+    color: white;
+    font-size: 20px;
+    border: 0;
+    border-radius: 5px;
+
+}
+.signInBtn i{
+    font-size: 40px;
+    color: whitesmoke;
+}
+.loginImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginImg img{
+    width: 500px;
+}
+
+@media (max-width: 690px) {
+    .loginImg img{
+        width: 300px;
+    }
+}
