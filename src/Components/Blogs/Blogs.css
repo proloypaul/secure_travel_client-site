@@ -1,0 +1,32 @@
+.blogContainer{
+    padding: 80px 0px;
+    background-color: rgba(245, 245, 245, 0.726);
+    text-align: center;
+}
+.blogContainer a{
+    text-decoration: none;    
+}
+
+.blogContainer h1{
+    font-size: 50px;
+}
+.blogContainer h5{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.336);
+}
+.blogContainer .blogBox{
+    /* width: 300px; */
+    background: #FFFFFF;
+    border: 0;
+    border-radius: 30px;
+}
+.blogBox .blogBoxContent{
+    text-align: left;
+    padding: 20px;
+}
+.blogBox .blogBoxContent h4{
+    color: black;
+}
+.blogBox .blogBoxContent p{
+    color: rgba(0, 0, 0, 0.644);
+}

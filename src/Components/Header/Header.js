@@ -19,9 +19,9 @@ const Header = () => {
                     {showBar ? '': <div className="nav-links">
                         <ul>
                             <li><Link to="/home">Home</Link></li>
-                            <li><Link to="/institute">About</Link></li>
-                            <li><Link to="/teachers">Blogs</Link></li>
-                            <li><Link to="/students">Dashboard</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                            <li><Link to="/blogs">Blogs</Link></li>
+                            <li><Link to="/dashboard">Dashboard</Link></li>
                             <li>{user?.email ? <Link to="/login"><button onClick={signOutProcess} className="loginBtn">LogOut</button></Link> : <Link to="/login"><button className="loginBtn">LogIn</button></Link>}</li>
                         </ul>
                         
