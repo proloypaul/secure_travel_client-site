@@ -11,7 +11,7 @@ const Blogs = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 setBlogData(data)
             })
     }, [])
@@ -25,7 +25,7 @@ const Blogs = () => {
                 <Grid container spacing={2}>
                     {blogData.map(blog => <Grid item xs={12} md={4} sm={6} key={blog._id}>
                         <Paper elevation={12}>
-                            <Link to="/login" className='blogBox'>
+                            <Link to={`/travelerExpDetails/${blog._id}`} className='blogBox'>
                                 <div>
                                     <img src={blog.img} alt="Empty!" style={{width:"100%", height: "200px"}}/>
                                 </div>
