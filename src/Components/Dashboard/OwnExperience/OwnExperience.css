@@ -1,0 +1,21 @@
+.ownExpContainer{
+    background-color: #301934;
+}
+.ownExpContainer .ownExpForm{
+    padding: 40px 0px;
+    text-align: center;
+}
+.ownExpContainer .ownExpForm input{
+    width: 60%;
+    padding: 20px 5px;
+    margin: 5px 0px;
+    border: 5px solid black;
+    border-radius: 10px;
+    color: #301934;
+    transition: all 0.3s ease-in-out;
+}
+
+.ownExpContainer .ownExpForm input:hover{
+    background-color: #000000;
+    color: white;
+}

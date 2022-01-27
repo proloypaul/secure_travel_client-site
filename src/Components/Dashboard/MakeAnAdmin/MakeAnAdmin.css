@@ -1,0 +1,18 @@
+.makeAdmin-container{
+    background-color: crimson;
+}
+
+.makeAdmin{
+    margin: 60px 0px;
+    padding: 40px 0px;
+}
+.makeAdmin h1{
+    font-weight: 300;
+}
+.makeAdmin form{
+    padding-top: 20px; 
+    margin: 0 auto;
+}
+.makeAdmin span{
+    color: #191970;
+}
