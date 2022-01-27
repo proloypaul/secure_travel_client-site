@@ -1,16 +1,16 @@
-import { Container, Grid, TextField } from '@mui/material';
+import { Container} from '@mui/material';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import UseFirebase from '../../Hooks/UseFirebase';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import UseAuth from '../../Hooks/UseAuth';
 import Header from '../Header/Header';
 import './Login.css'
 
 
 const Login = () => {
-    const {signInUsingGoogle, loginWithEmailAndPassword, error} = UseFirebase()
+    const {signInUsingGoogle, loginWithEmailAndPassword, error} = UseAuth()
     const [logerData, setLogerData] = useState({})
-    // const history = unstable_HistoryRouter()
-    // const location = useLocation()
+    const navigation = useNavigate()
+    const location = useLocation()
 
     const handleBlur = event => {
         const field = event.target.name;
@@ -22,7 +22,7 @@ const Login = () => {
     const handleLogIn = event => {
         event.preventDefault()
         // console.log(logerData)
-        loginWithEmailAndPassword(logerData.email, logerData.password)
+        loginWithEmailAndPassword(logerData.email, logerData.password, navigation, location)
 
     }
     return (
@@ -53,7 +53,7 @@ const Login = () => {
                     <p>Are you new Here click to <Link to="/register"><button className="logBtn">Register</button></Link> </p>
                 </div>
                 <p style={{color:"red"}}>{error}</p>
-                <button onClick={() => signInUsingGoogle()} className="signInBtn"><i className="fab fa-google"></i> signIn</button>
+                <button onClick={() => signInUsingGoogle(navigation, location)} className="signInBtn"><i className="fab fa-google"></i> signIn</button>
             </div>
             </Container>
         </div>

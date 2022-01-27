@@ -1,14 +1,14 @@
 import { Container, Paper, TextField } from '@mui/material';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import UseFirebase from '../../../Hooks/UseFirebase';
+import { Link, useNavigate } from 'react-router-dom';
+import UseAuth from '../../../Hooks/UseAuth';
 import Header from '../../Header/Header';
 import './Register.css';
 
 const Register = () => {
-    const {registerWithEmailAndPassword, error} = UseFirebase()
+    const {registerWithEmailAndPassword, error} = UseAuth()
     const [registerData, setRegisterData] = useState({})
-    // const history = useHistory()
+    const navigation = useNavigate() 
 
     const handleBlur = event => {
         const field = event.target.name;
@@ -21,7 +21,7 @@ const Register = () => {
         event.preventDefault()
         console.log(registerData)
         if(registerData.password === registerData.retypePassword){
-            registerWithEmailAndPassword(registerData.email, registerData.password, registerData.name)
+            registerWithEmailAndPassword(registerData.email, registerData.password, registerData.name, navigation)
             alert("Register successFully!")
             event.target.reset()
         }else{
@@ -77,7 +77,7 @@ const Register = () => {
                         variant="standard"
                         />
                         <div style={{textAlign: "center"}}>
-                            {/* <p>{error}</p> */}
+                            <p>{error}</p>
                             <button className="submitBtn" type="submit">Confirm</button>
                             <p>Already register click to <Link to="/login">login</Link></p>
                         </div>

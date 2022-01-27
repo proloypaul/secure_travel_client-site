@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import { Container } from '@mui/material';
 import {Link} from 'react-router-dom';
 import './Header.css';
-import UseFirebase from '../../Hooks/UseFirebase';
+import UseAuth from '../../Hooks/UseAuth';
 
 const Header = () => {
     const [showBar, setShowBar] = useState(false)
-    const {user, signOutProcess} = UseFirebase()
+    const {user, signOutProcess} = UseAuth();
     
     return (
         <div className='navbar-container'>

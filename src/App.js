@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blogs from './Components/Blogs/Blogs';
+import AuthProvider from './Components/Contex/AuthProvider';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
@@ -10,6 +11,7 @@ import TrevelerExpDetails from './Components/TravelerExpDetails/TrevelerExpDetai
 function App() {
   return (
     <div>
+      <AuthProvider>
       <BrowserRouter>
         <Routes>
           <Route path={"/"} element={<Home></Home>}></Route>
@@ -21,6 +23,7 @@ function App() {
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

@@ -16,7 +16,7 @@ const TrevelerExpDetails = () => {
                 // console.log(data)
                 setExperiencesData(data)
             })
-    }, [])
+    }, [Id])
 
     return (
         <div className='ExpContainer'>
