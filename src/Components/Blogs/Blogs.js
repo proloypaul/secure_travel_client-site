@@ -5,16 +5,21 @@ import './Blogs.css';
 
 const Blogs = () => {
     const [blogData, setBlogData] = useState([])
-
+    const [pagecount, setPagecount] = useState(0)
+    const [page, setPage] = useState(0)
+    const size = 10;
     useEffect(() => {
-        const url = `https://secret-depths-81352.herokuapp.com/blogs`
+        const url = `http://localhost:3600/blogs?page=${page}&&size=${size}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
-                setBlogData(data)
+                setBlogData(data.result)
+                const count = data.count;
+                const pageNumber = Math.ceil(count/size)
+                setPagecount(pageNumber)
             })
-    }, [])
+    }, [page])
     return (
         <div className='blogContainer'>
             <Container>
@@ -37,6 +42,18 @@ const Blogs = () => {
                         </Paper>
                     </Grid>)}
                 </Grid>
+                <div className="pagination">
+                        {
+                            [...Array(pagecount).keys()]
+                            .map(number => <button
+                            className={number === page ? 'selected': ''}
+                            key={number}
+                            onClick={() => setPage(number)}
+                            >{number}</button>)
+                        }
+                        
+                </div>
+                
             </Container>
         </div>
     );

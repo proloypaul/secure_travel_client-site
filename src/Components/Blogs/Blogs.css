@@ -30,3 +30,24 @@
 .blogBox .blogBoxContent p{
     color: rgba(0, 0, 0, 0.644);
 }
+
+/* pagination style */
+.pagination{
+    margin: 20px auto;
+}
+.pagination button{
+    background-color: wheat;
+    color: black;
+    padding: 5px 20px;
+    margin-left: 10px; 
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+   
+}
+.pagination .selected{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
