@@ -7,7 +7,7 @@ const MangeAllExp = () => {
     const [blogData, setBlogData] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:3600/blogs`
+        const url = `https://secret-depths-81352.herokuapp.com/blogs`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -21,7 +21,7 @@ const MangeAllExp = () => {
         // console.log(id)
         const confirmMsg = window.confirm("Would you like to  delete this order?")
         if(confirmMsg){
-            const url = `http://localhost:3600/blogs/${id}`
+            const url = `https://secret-depths-81352.herokuapp.com/blogs/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

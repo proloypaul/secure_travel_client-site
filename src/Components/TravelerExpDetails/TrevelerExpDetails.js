@@ -9,7 +9,7 @@ const TrevelerExpDetails = () => {
     const [experiencesData, setExperiencesData] = useState({})
 
     useEffect(() => {
-        const url = `http://localhost:3600/blogs/${Id}`;
+        const url = `https://secret-depths-81352.herokuapp.com/blogs/${Id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {

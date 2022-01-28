@@ -18,7 +18,7 @@ const OwnExperience = () => {
         event.preventDefault()
         // console.log(experienceData)
 
-        const url = `http://localhost:3600/blogs`
+        const url = `https://secret-depths-81352.herokuapp.com/blogs`
         fetch(url, {
             method: 'POST',
             headers: {

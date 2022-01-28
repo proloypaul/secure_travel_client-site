@@ -95,7 +95,7 @@ const UseFirebase = () => {
     // all user data insert and update in database 
     const saveUserTodb = (email, name, method) => {
         const user = {email, name}
-        const url = `http://localhost:3600/users`
+        const url = `https://secret-depths-81352.herokuapp.com/users`
         fetch(url, {
             method: method,
             headers: {
@@ -112,7 +112,7 @@ const UseFirebase = () => {
 
     // load admin 
     useEffect(() => {
-        const url = `http://localhost:3600/users/${user.email}`
+        const url = `https://secret-depths-81352.herokuapp.com/users/${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => {

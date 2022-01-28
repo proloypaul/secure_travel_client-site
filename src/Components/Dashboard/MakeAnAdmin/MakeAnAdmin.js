@@ -11,7 +11,7 @@ const MakeAnAdmin = () => {
     const handleAdmin = event => {
         event.preventDefault()
         const admin = {email: adminEmail}
-        const url = `http://localhost:3600/users/admin`
+        const url = `https://secret-depths-81352.herokuapp.com/users/admin`
         fetch(url, {
             method: 'put',
             headers: {
