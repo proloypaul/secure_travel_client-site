@@ -1,8 +1,8 @@
 import { Alert, Container, TextField } from '@mui/material';
 import React, { useState } from 'react';
-import './MakeAdmin.css';
+import './MakeAnAdmin.css';
 
-const MakeAdmin = () => {
+const MakeAnAdmin = () => {
     const [adminEmail, setAdminEmail] = useState('')
     const [successful, setSuccessful] = useState(false)
     const handleBlur = event => {
@@ -53,4 +53,4 @@ const MakeAdmin = () => {
     );
 };
 
-export default MakeAdmin;
+export default MakeAnAdmin;

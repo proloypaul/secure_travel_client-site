@@ -5,7 +5,7 @@ import UseAuth from '../../Hooks/UseAuth';
 
 const Header = () => {
     const [showBar, setShowBar] = useState(false)
-    const {user, signOutProcess} = UseAuth();
+    const {user, admin, signOutProcess} = UseAuth();
     
     return (
         <div className='navbar-container'>
@@ -16,13 +16,28 @@ const Header = () => {
                     </div>
                     <p className='bar-button' onClick={() => setShowBar(!showBar) }><i className="fas fa-bars"></i></p>
                     {showBar ? '': <div className="nav-links">
-                        <ul>
+                        {admin ? <span>
+                            <ul>
+                                <li><Link to="/home">Home</Link></li>
+                                <li><Link to="/ownExperience">OwnExperience</Link></li>
+                                <li><Link to="/makeAnAdmin">MakeAnAdmin</Link></li>
+                                <li><Link to="/ManageAllExp">ManageAllExp</Link></li>
+                                <li>{user?.email ? <Link to="/login"><button onClick={signOutProcess} className="loginBtn">LogOut</button></Link> : <Link to="/login"><button className="loginBtn">LogIn</button></Link>}</li>
+                            </ul>
+                        </span>:<span>
+                            <ul>
+                                <li><Link to="/home">Home</Link></li>
+                                <li><Link to="/ownExperience">OwnExperience</Link></li>
+                                <li>{user?.email ? <Link to="/login"><button onClick={signOutProcess} className="loginBtn">LogOut</button></Link> : <Link to="/login"><button className="loginBtn">LogIn</button></Link>}</li>
+                            </ul>
+                            </span>}
+                        {/* <ul>
                             <li><Link to="/home">Home</Link></li>
                             <li><Link to="/ownExperience">OwnExperience</Link></li>
                             <li><Link to="/makeAnAdmin">MakeAnAdmin</Link></li>
-                            <li><Link to="/dashboard">Dashboard</Link></li>
+                            <li><Link to="/ManageAllExp">ManageAllExp</Link></li>
                             <li>{user?.email ? <Link to="/login"><button onClick={signOutProcess} className="loginBtn">LogOut</button></Link> : <Link to="/login"><button className="loginBtn">LogIn</button></Link>}</li>
-                        </ul>
+                        </ul> */}
                     </div>}
                 </div>
             </Container>
