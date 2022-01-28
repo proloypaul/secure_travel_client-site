@@ -45,7 +45,7 @@ const MakeAnAdmin = () => {
                     autoComplete="current-password"
                     variant="standard"
                 />
-                <button type="submit" className="logBtn">Admin</button>
+                <button type="submit" className='ExpBtnTwo'>Admin</button>
                 </form>
             </Container>     
             {successful ? <Alert severity="success">{adminEmail} added Admin successfully!</Alert> : <Alert severity="warning">{adminEmail} You can't admin any user who don't Register here!</Alert>}

@@ -1,0 +1,20 @@
+.blogBox .ExpControl{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.ExpBtnOne{
+    padding: 10px 15px;
+    background-color: red;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
+.ExpBtnTwo{
+    padding: 10px 15px;
+    background-color: #4582FF;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}

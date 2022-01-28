@@ -6,6 +6,7 @@ import PrivateRouter from './Components/Contex/PrivateRouter';
 import Dashboard from './Components/Dashboard/Dashboard';
 import MakeAnAdmin from './Components/Dashboard/MakeAnAdmin/MakeAnAdmin';
 import OwnExperience from './Components/Dashboard/OwnExperience/OwnExperience';
+import MangeAllExp from './Components/Dashboard/ManageAllExp/MangeAllExp';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
@@ -25,6 +26,7 @@ function App() {
           <Route path={'/dashboard'} element={<PrivateRouter><Dashboard></Dashboard></PrivateRouter>}></Route>
           <Route path={'/ownExperience'} element={<OwnExperience></OwnExperience>}></Route>
           <Route path={'/makeAnAdmin'} element={<MakeAnAdmin></MakeAnAdmin>}></Route>
+          <Route path={'/manageAllExp'} element={<MangeAllExp></MangeAllExp>}></Route>
           <Route path={'/login'} element={<Login></Login>}></Route>
           <Route path={'/register'} element={<Register></Register>}></Route>
         </Routes>

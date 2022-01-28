@@ -21,7 +21,7 @@ const Header = () => {
                                 <li><Link to="/home">Home</Link></li>
                                 <li><Link to="/ownExperience">OwnExperience</Link></li>
                                 <li><Link to="/makeAnAdmin">MakeAnAdmin</Link></li>
-                                <li><Link to="/ManageAllExp">ManageAllExp</Link></li>
+                                <li><Link to="/manageAllExp">ManageAllExp</Link></li>
                                 <li>{user?.email ? <Link to="/login"><button onClick={signOutProcess} className="loginBtn">LogOut</button></Link> : <Link to="/login"><button className="loginBtn">LogIn</button></Link>}</li>
                             </ul>
                         </span>:<span>

@@ -46,11 +46,11 @@ const Login = () => {
                 style={{width: "60%", margin: "10px 0px", background: "white", padding: "20px 5px", borderRadius: "10px"}}
                 />
                 <div>
-                    <button type="submit" className="logBtn">LogIn</button>
+                    <button type="submit" className='ExpBtnTwo'>LogIn</button>
                 </div>
                 </form>
                 <div>
-                    <p>Are you new Here click to <Link to="/register"><button className="logBtn">Register</button></Link> </p>
+                    <p>Are you new Here click to <Link to="/register"><button className='ExpBtnTwo'>Register</button></Link> </p>
                 </div>
                 <p style={{color:"red"}}>{error}</p>
                 <button onClick={() => signInUsingGoogle(navigation, location)} className="signInBtn"><i className="fab fa-google"></i> signIn</button>
